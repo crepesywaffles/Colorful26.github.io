@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+}
+.home{
+    width: 100vw;
+}
+.home_header{
+    position: absolute;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.home_img{
+    width: 100%;
+    
+}
+.home_logo{
+    width: 30%;
+}
+
+.home_text{
+    padding-right: 2%;
+    color: whitesmoke;
+    
+}
+
+/* .home_text{} */
