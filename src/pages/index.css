@@ -1,28 +1,118 @@
-body{
+
+*{
     margin: 0;
+    font-family: sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
-.home{
-    width: 100vw;
-}
-.home_header{
-    position: absolute;
+
+.navigation{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background: #111 ;
+    transition: 0.1s;
     display:flex;
-    justify-content: space-between;
+    
+}
+
+.navigation .navArea{
+    position: relative;
+    width: 45%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
     align-items: center;
-    width: 100%;
 }
-.home_img{
+.navigation .navArea ul li::before{
+content: '';
+position: absolute;
+top: 0; 
+left: 0;
+width: 100%;
+height: 100%;
+background-color: blue;
+z-index: -1;
+opacity: 0;
+transition: 0.5s;
+}
+.navigation .navArea ul li:nth-child(1)::before
+{
+ background: blue;
+}
+.navigation .navArea ul li:nth-child(2)::before
+{
+ background:rgb(179, 29, 224);
+}
+.navigation .navArea ul li:nth-child(3)::before
+{
+ background: green;
+}
+.navigation .navArea ul li:nth-child(4)::before
+{
+ background: rgb(243, 159, 32);
+}
+.navigation .navArea ul li:nth-child(5)::before
+{
+ background: pink;
+}
+.navigation .navArea ul li:nth-child(6)::before
+{
+ background: rgb(24, 140, 207);
+}
+.navigation .navArea ul li:hover::before{
+    opacity: 1;
+}
+.navigation .navArea ul li{
+    list-style: none;
+
+}
+.navigation .navArea ul li .link {
+    font-size: 3em;
+    font-weight: 600 ;
+    text-decoration: none;
+    color:white;
+
+}
+.navigation .navArea ul li:hover .link {
+    color:black;
+
+}
+.imgArea{
+    position: relative;
+    width: 55%;
+    height: 100vh;
+    background:whitesmoke;
+}
+.imgArea img{
+    position: absolute;
+    top:0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+@media (max-width:768px)
+{
+    .navigation .navArea{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+    .imgArea{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background:whitesmoke;
+    }
+    .navigation .navArea ul li:hover::before{
+        opacity: 0;
+    }
     
 }
-.home_logo{
-    width: 30%;
-}
-
-.home_text{
-    padding-right: 2%;
-    color: whitesmoke;
-    
-}
-
-/* .home_text{} */

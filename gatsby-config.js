@@ -7,9 +7,6 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-offline",
-    {
-      resolve: "gatsby-plugin-manifest",
-    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
