@@ -1,0 +1,75 @@
+*{
+    margin:0;
+    padding: 0;
+    
+}
+.container{
+    position: relative;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    border: 0;
+    
+}
+.container .card{
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    margin: 30px 10px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 202px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    background: white;
+}
+.container .card:hover{
+    height: 420px;
+}
+.container .card .imgBX{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+}
+.container .card .imgBX img{
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.container .card .content{
+    position: relative;
+    margin-top: -100px;
+    padding: 10px 15px;
+    text-align: center;
+    color:#111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.container .card:hover .content{
+    visibility:visible;
+    opacity: 1;
+    margin-top: -80px;
+    transition-delay: 0.3s;
+}
+.container .card .content button{
+    border-radius: 4px;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    background:transparent;
+    color: black;
+    border: solid 1px;
+}
+.container .card .content button:hover{
+    background:blue;
+    color:white;
+    border: none;
+}

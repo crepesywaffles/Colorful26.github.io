@@ -1,4 +1,3 @@
-
 *{
     margin: 0;
     font-family: sans-serif;
@@ -102,7 +101,7 @@ transition: 0.5s;
     position:fixed!important;
     width: 100%;
     height: 100px;
-    background: black url(../images/ColorFul26.png);
+    background: black url(../../images/ColorFul26.png);
     z-index: 100;
     background-size: 100px;
     background-repeat: no-repeat;
@@ -111,8 +110,8 @@ transition: 0.5s;
 }
 .menuToggle.active{
     position:absolute;
-    background: transparent url(../images/cancel.png);
-    z-index: 100;
+    background: transparent url(../../images/cancel.png);
+    z-index: 1000;
     background-size: 80px;
     background-repeat: no-repeat;
     background-position: center;

@@ -1,21 +1,21 @@
 import {Link} from "gatsby"
-import "../pages/index.css"
-import React, { Component} from 'react'
-import after from  "../images/After.jpg"
-import logo from "../images/ColorFul26.png"
-import about from "../images/AboutUs.jpg"
-import services from "../images/Services.jpg"
-import team from "../images/team.jpg"
-import Contact from "../images/contac.jpg"
-import { Fragment } from "react"
+import "../Nav/Nav.css"
+import React, { Component } from 'react'
+import after from  "../../images/After.jpg"
+import logo from "../../images/ColorFul26.png"
+import about from "../../images/AboutUs.jpg"
+import services from "../../images/Services.jpg"
+import team from "../../images/team.jpg"
+import Contact from "../../images/contac.jpg"
 
-export default class index extends Component {
+export default class Nav extends Component {
     constructor(){
         super()
 
         this.imagen = React.createRef()
         this.menu = React.createRef()
         this.nav= React.createRef()
+        this.child= React.createRef()
     }
     
     changeImage1 = () => {
@@ -46,13 +46,14 @@ export default class index extends Component {
         const element = this.menu.current
         const element2 = this.nav.current
         { element && element.classList.toggle("active")
-         element2 && element2.classList.toggle("active") } 
+         element2 && element2.classList.toggle("active")
+         }
     }
     
     
     render() {
         return (
-            <Fragment>
+            <div onClick={this.props.fun}>
                 <div onClick={this.menuToggle} ref={this.menu} className="menuToggle"></div>
                     <div ref={this.nav} className="navigation">
                         <div className="navArea">
@@ -61,7 +62,7 @@ export default class index extends Component {
                                     <Link
                                         onMouseEnter={this.changeImage1}
                                         className="link"
-                                        to="#"
+                                        to="/#"
                                     >
                                         Home
                     </Link>
@@ -70,7 +71,7 @@ export default class index extends Component {
                                     <Link
                                         onMouseEnter={this.changeImage2}
                                         className="link"
-                                        to="AboutUs"
+                                        to="/AboutUs"
                                     >
                                         About Us
                     </Link>
@@ -79,7 +80,7 @@ export default class index extends Component {
                                     <Link
                                         onMouseEnter={this.changeImage3}
                                         className="link"
-                                        to="Services"
+                                        to="/Services"
                                     >
                                         Services
                     </Link>
@@ -88,7 +89,7 @@ export default class index extends Component {
                                     <Link
                                         onMouseEnter={this.changeImage4}
                                         className="link"
-                                        to="OurWork"
+                                        to="/OurWork"
                                     >
                                         Our Work
                     </Link>
@@ -97,7 +98,7 @@ export default class index extends Component {
                                     <Link
                                         onMouseEnter={this.changeImage5}
                                         className="link"
-                                        to="Team"
+                                        to="/Team"
                                     >
                                         Team
                     </Link>
@@ -106,7 +107,7 @@ export default class index extends Component {
                                     <Link
                                         onMouseEnter={this.changeImage6}
                                         className="link"
-                                        to="Contact"
+                                        to="/Contact"
                                     >
                                         Contact
                     </Link>
@@ -117,13 +118,7 @@ export default class index extends Component {
                             <img ref={this.imagen} src={logo} id="slider" />
                         </div>
                     </div>
-                    <div className="prueba">Hola mubndo</div>
-                    <div className="prueba2">Hola mubndo</div>
-                    <div className="prueba">Hola mubndo</div>
-                    <div className="prueba2">Hola mubndo</div>
-            
-            
-            </Fragment>
+            </div>
         );
     }
 }
