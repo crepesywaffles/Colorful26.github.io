@@ -22,7 +22,7 @@
     padding: 20px 10px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 5px 202px rgba(0,0,0,0.5);
+    box-shadow: 0 5px 202px rgba(0,0,0,0);
     transition: 0.5s ease-in-out;
     background: white;
 }

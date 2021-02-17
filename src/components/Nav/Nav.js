@@ -54,7 +54,7 @@ export default class Nav extends Component {
     render() {
         return (
             <div onClick={this.props.fun}>
-                <div onClick={this.menuToggle} ref={this.menu} className="menuToggle"></div>
+                <div onClick={this.menuToggle} ref={this.menu} className="menuToggle" id="menu"></div>
                     <div ref={this.nav} className="navigation">
                         <div className="navArea">
                             <ul>

@@ -11,10 +11,10 @@ export default class Services extends Component {
 
         this.services = React.createRef()
     }
-    mainToggle = () => {
-        {
+    mainToggle = (e) => {
+        if(e.target.id === "menu"){
             const element = this.services.current
-            { element && element.classList.toggle("active") }
+            element && element.classList.toggle("active")
         }
     }
 
