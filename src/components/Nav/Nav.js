@@ -14,8 +14,7 @@ export default class Nav extends Component {
 
         this.imagen = React.createRef()
         this.menu = React.createRef()
-        this.nav= React.createRef()
-        this.child= React.createRef()
+        this.nav = React.createRef()
     }
     
     changeImage1 = () => {
